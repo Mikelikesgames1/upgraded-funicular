@@ -1,0 +1,13 @@
+<div id="container"></div>
+<script>
+    var game = "https://cdn.jsdelivr.net/gh/mikelikesgames1/scaling-octo-eureka/Super%20Smash%20Flash.swf" // jsdelivr url goes in the quotes
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load(game);
+    });
+</script>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
